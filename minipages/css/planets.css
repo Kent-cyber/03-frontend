@@ -1,0 +1,11 @@
+body {
+    background-image: url(/03-frontend/minipages/img/css-16-bg.webp);
+}
+
+section {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}

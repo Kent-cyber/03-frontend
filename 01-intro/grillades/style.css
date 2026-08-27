@@ -1,0 +1,63 @@
+:root {
+    --grid-color: #BBCCFF;
+    --flexbox-color: #FFFFFF;
+}
+
+header, aside, nav, main, footer {
+    background-color: var(--grid-color);
+    border: 1px solid;
+}
+
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: var(--flexbox-color);
+    margin: 10px;
+    padding: 25px;
+    width: 40%;
+}
+
+aside {
+    border: 1px solid;
+    text-align: center;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-rows: auto 300px auto;
+}
+
+header {
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 2 / 6;
+}
+
+main {
+    grid-column: 2 / 6;
+    grid-row: 2 / 5;
+}
+
+footer {
+    grid-column: 2 / 6;
+    padding: 15px;
+}

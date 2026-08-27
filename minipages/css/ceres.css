@@ -1,0 +1,26 @@
+:root {
+    --bg-color: #E0E2E8;
+    --green: #36A23E;
+    --orange: #FF6633;
+    --fushia: #CC0066;
+    --main-font: Verdana;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--main-font);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: justify;
+}

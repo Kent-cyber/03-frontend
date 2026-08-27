@@ -1,0 +1,28 @@
+:root {
+    --yellow: #FCD116;
+    --blue: #003893;
+    --red: #CE1126;
+}
+
+.yellow {
+    background-color: var(--yellow);
+    height: 150px;
+}
+
+.blue {
+    background-color: var(--blue);
+    height: 150px;
+}
+
+.red {
+    background-color: var(--red);
+    height: 150px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}

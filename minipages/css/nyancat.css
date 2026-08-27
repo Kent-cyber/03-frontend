@@ -1,0 +1,24 @@
+:root {
+    --main-color: #0F4D8F;
+    --text-color: #FFFFFF;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+h1 {
+    color: var(--text-color);
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border: 5px solid white;
+    padding: 30px;
+    border-radius: 2.5cap;
+}
