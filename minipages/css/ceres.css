@@ -11,9 +11,47 @@ body {
     font-family: var(--main-font);
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
-    text-align: center;
     text-transform: uppercase;
+    padding: 5px;
+    font-size: 55px;
+}
+
+.green {
+    color: var(--green);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+}
+
+.green2 {
+    color: var(--green);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.orange {
+    color: var(--orange);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.orange2 {
+    color: var(--orange);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+}
+
+.fushia {
+    color: var(--fushia);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
 }
 
 .image {
@@ -23,4 +61,5 @@ h1 {
 
 p {
     text-align: justify;
+    padding: 5px;
 }

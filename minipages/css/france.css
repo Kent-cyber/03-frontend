@@ -1,0 +1,39 @@
+:root {
+    --blue: blue;
+    --grey: grey;
+}
+
+header {
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+p, ul {
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
+    padding: 15px;
+}
+
+table, td {
+    border: 1px solid var(--blue);
+}
+
+th {
+    text-transform: uppercase;
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
+}
