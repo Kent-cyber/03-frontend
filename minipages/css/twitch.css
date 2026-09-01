@@ -1,0 +1,57 @@
+:root {
+    --blue: #008CBA;
+    --grey: #555555;
+    --green: #4CAF50;
+    --main-font: monospace;
+}
+
+h1 {
+    font-family: var(--main-font);
+    color: var(--blue);
+}
+
+section {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.popular {
+    background-color: var(--blue);
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.look {
+    background-color: var(--green);
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.fast {
+    background-color: var(--grey);
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+table {
+    border-style: groove;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: lightgrey;
+}
+
+span {
+    background-color: var(--green);
+    color: white;
+}
