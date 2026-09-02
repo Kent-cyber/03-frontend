@@ -24,34 +24,34 @@ h1 {
 
 .green {
     color: var(--green);
-    border-top: solid 1px;
-    border-bottom: solid 1px;
-    border-left: solid 1px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
 }
 
 .green2 {
     color: var(--green);
-    border-top: solid 1px;
-    border-bottom: solid 1px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .orange {
     color: var(--orange);
-    border-top: solid 1px;
-    border-bottom: solid 1px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .orange2 {
     color: var(--orange);
-    border-top: solid 1px;
-    border-bottom: solid 1px;
-    border-right: solid 1px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
 }
 
 .fushia {
     color: var(--fushia);
-    border-top: solid 1px;
-    border-bottom: solid 1px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .image {
