@@ -13,6 +13,7 @@ body {
 .block {
     border: solid 2px black;
     margin: 5%;
+    border-collapse: collapse;
 }
 
 .bar1 {

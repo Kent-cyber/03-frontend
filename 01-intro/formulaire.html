@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+  </head>
+  <body>
+    <main>
+      <h1>Formulaire d'inscription</h1>
+      <h2>Votre compte configuré en 2 minutes !</h2>
+      <form method="get">
+        <fieldset>
+          <legend>État civil</legend>
+          <label for="name">Nom : </label>
+          <input type="text" id="name" name="user_name" /><br />
+
+          <label for="surname">Prénom : </label>
+          <input type="text" id="surname" surname="user_surname" /><br />
+
+          <label for="date">Date de naissance : </label>
+          <input type="date" id="date" date="user_date" />
+        </fieldset>
+        <fieldset>
+          <legend>Informations de contact</legend>
+          <label for="mail">Adresse Email : </label>
+          <input type="email" id="mail" mail="user_mail" /><br />
+
+          <label for="phone">Téléphone : </label>
+          <input type="tel" id="phone" phone="user_phone" />
+        </fieldset>
+        <fieldset>
+          <input
+            type="checkbox"
+            id="user_conditions"
+            name="user_conditions"
+            value="Conditions"
+          />
+          <label for="user_conditions"
+            >J'accepte les
+            <a
+              href="https://vitrines-colmar.com/mon-chat-pitre-colmar/?srsltid=AfmBOoqXxBcTP8HR3QlYHS3O6YcYNSJwSvFKMGrP3AcnyH4nGiXIWwlB"
+              target="_blank"
+              >conditions d'utilisation</a
+            ></label
+          ><br />
+          <button type="submit">S'inscrire</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
