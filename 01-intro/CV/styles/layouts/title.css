@@ -1,0 +1,82 @@
+.hero {
+  width: 560px;
+  justify-self: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ======================== Séparateur ============================= */
+.hero__separator {
+  position: relative;
+  height: 60px;
+  margin: 36px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__separator::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 270px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--light-primary-color-text)
+  );
+}
+
+.hero__separator::after {
+  content: "";
+  position: absolute;
+  left: 290px;
+  right: 0;
+  width: 270px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--light-primary-color-text),
+    transparent
+  );
+}
+
+.hero__diamond {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--light-primary-color-text);
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__diamond span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--light-primary-color-text);
+}
+
+/* ================================================================ */
+
+.hero__description {
+  font-size: 16px;
+  line-height: 1.32em;
+  text-align: justify;
+}

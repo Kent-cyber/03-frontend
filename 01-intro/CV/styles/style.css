@@ -1,0 +1,20 @@
+:root {
+  --primary-color-text: #ebe1d5;
+  --secondary-color-text: #53677f;
+  --light-background: #f6f6f6;
+  --light-primary-color-text: #162234;
+  --light-secondary-color-text: #4b5b6b;
+  --main-font: "Cormorant Garamond", Georgia, serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #ebe1d5, white);
+  font-family: var(--main-font);
+  color: var(--light-primary-color-text);
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
