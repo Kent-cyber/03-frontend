@@ -1,0 +1,27 @@
+#dateDay{
+width: 50%;
+margin:auto;
+padding: 15px;
+border-radius: 12px;
+border-color: blue;
+
+}
+*{
+
+box-sizing: border-box;
+
+}
+.fixe {
+
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="date"], input[type="datetime-local"]{
+
+      display: inline-block;
+    width: 200px;
+}
+.wrap{ 
+    margin-bottom: 10px;
+}
