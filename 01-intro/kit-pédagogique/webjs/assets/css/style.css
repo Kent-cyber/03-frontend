@@ -1,20 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    width: 50%;
+    margin: 30px auto;
+    padding: 15px;
+    border: 2px solid blue;
+}
+
+#myBirthday {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.date-naissance, .heure-naissance, .zodiacSign {
+    color: blue;
+    font-weight: bolder;
+}
+
 #dateDay{
-width: 50%;
-margin:auto;
-padding: 15px;
-border-radius: 12px;
-border-color: blue;
+    width: 50%;
+    margin:auto;
+    padding: 15px;
+    border-radius: 12px;
+    border-color: blue;
 
 }
-*{
 
-box-sizing: border-box;
-
-}
 .fixe {
 
     display: inline-block;
-    width: 100px;
+    width: 200px;
 }
 
 input[type="date"], input[type="datetime-local"]{

@@ -7,7 +7,7 @@ let taille = 16;
 
 function mettreAJourTaille() {
   texte.style.fontSize = `${taille}px`;
-  tailleActuelle.textContent = `Taille actuelle : ${taille}px`;
+  tailleActuelle.value = taille;
 }
 
 agrandir.addEventListener("click", () => {
