@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cadetblue;
+    color: white;
+}
+
+.main-page {
+    border: 1px solid white;
+    padding: 0 15px;
+}
+
+section {
+    border: 1px dotted white;
+    padding: 15px;
+}
+
+input {
+    background-color: rgb(65, 125, 125);
+    border: 1px solid white;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: rgb(65, 125, 125);
+    width: 50%;
+    margin: 15px 5px;
+}
+
+td, th {
+    border: 1px solid white;
+    padding: 8px;
+}
+
+th {
+    text-align: center;
+}
+
+.suppr {
+    display: flex;
+    justify-content: center;
+}
+
+.suppr button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.suppr button:hover {
+    transform: scale(1.2);
+}

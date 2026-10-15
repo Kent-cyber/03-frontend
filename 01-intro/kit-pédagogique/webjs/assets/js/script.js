@@ -126,3 +126,17 @@ mybtnDate.addEventListener("click", function () {
 
 const mybtnHour = document.getElementById("btnHour");
 mybtnHour.addEventListener("click", afficherHeure);
+
+/* ============================
+GESTION DES DATES ET INTERVALLES
+============================ */
+
+const todayDate = document.getElementById("todayDate");
+const todayTime = document.getElementById("todayTime");
+
+function afficherDateJour() {
+  let dateToday = new Date();
+  let hourToday = new Date();
+
+  let hour = hourToday.getHours();
+}
