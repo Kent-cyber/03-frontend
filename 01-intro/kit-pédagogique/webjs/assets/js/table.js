@@ -123,8 +123,34 @@ function addPeople(firstName, lastName) {
     button.addEventListener("click", () => {
         li.remove();
         row.remove();
+
+        const index = people.indexOf(person);
+
+        if (index !== -1) {
+            people.splice(index, 1);
+        }
     });
 
     message.textContent = `${firstName} ${lastName} ajouté`;
-
 }
+
+const form = document.querySelector("form");
+const firstNameInput = document.getElementById("firstName");
+const lastNameInput = document.getElementById("lastName");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const firstName = firstNameInput.value.trim();
+    const lastName = lastNameInput.value.trim();
+
+    if (firstName === "" || lastName === "") {
+        message.textContent = "Veuillez remplir les deux champs";
+        return;
+    }
+
+    addPeople(firstName, lastName);
+
+    form.reset();
+});
