@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid green;
+    padding: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    background-color: lightgreen;
+    border: 1px solid white;
+    padding: 12px;
+}
+
+input {
+    background-color: lightgreen;
+    border: none;
+}
+
+button {
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}

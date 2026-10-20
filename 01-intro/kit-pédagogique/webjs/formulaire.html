@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
-    <link rel="stylesheet" href="./assets/css/regex-form.css">
-    <script src="./assets/js/regex.js" defer></script>
+    <title>Validation Objet</title>
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <script src="./assets/js/form.js" type="module"></script>
 </head>
 <body>
-    <h1>Expressions régulières</h1>
-    <h2>Contrôle de saisie</h2>
-    <fieldset>
-        <legend>formulaire d'inscription</legend>
-        <form action="" method="get" enctype="application/x-www-form-urlencoded">
+    <h1>JS Approche Objet</h1>
+    <main>
+        <h2>Ajouter un article</h2>
+        <form id="formulaire">
             <div>
-                <label for="myName">Nom</label>
-                <input type="text" name="myName" id="myName" placeholder="votre nom" required>
+                <label for="nom">Nom de l'article</label>
+                <input id="nom" type="text" pattern="^[a-zA-Z]{2,}$" title="Le nom doit comporter 2 lettres au minimum !!!" >
             </div>
             <div>
-                <label for="myBirthDate">Date de naissance</label>
-                <input type="date" name="myBirthDate" id="myBirthDate" value="1970-01-01" required>
+                <label for="prix">Prix Hors taxes</label>
+                <input id="prix" type="number" step="0.01" min="0.10" max="99999.99">
             </div>
             <div>
-                <label for="myPhone">Téléphone</label>
-                <select name="indicatif">
-                    <option value="1">+1</option>
-                    <option value="32">+32</option>
-                    <option value="33">+33</option>
-                    <option value="41">+41</option>
+                <label for="tva">TVA</label>
+                <select id="tva">
+                    <option value="20">20%</option>
+                    <option value="10">10%</option>
+                    <option value="5.5">5.5%</option>
+                    <option value="2.1">2.1%</option>
                 </select>
-                <input type="tel" name="myPhone" id="myPhone" placeholder="ex: 0102030405" value="06.02.03 04 05" required>
             </div>
             <div>
-                <label for="myPassword1">Mot de passe</label>
-                <input type="password" name="myPassword1" id="myPassword1" required>
-            </div>
-            <div>
-                <label for="myPassword2">Confirmez Mot de passe</label>
-                <input type="password" name="myPassword2" id="myPassword2" required>
-            </div>
-            <div>
-                <button type="submit" id="valider">Valider</button>
+                <button type="submit" id="valider">Ajouter l'article</button>
             </div>
         </form>
-    </fieldset>
+        <hr>
+        <section>
+            <!-- les articles ajoutés apparaitront ici-->
+             <ul id="articles">
+
+             </ul>
+        </section>
+    </main>
 </body>
 </html>
