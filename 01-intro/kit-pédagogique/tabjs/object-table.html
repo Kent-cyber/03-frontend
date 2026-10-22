@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau d'objets</title>
+    <link rel="stylesheet" href="./assets/css/object-table.css">
+    <script src="./assets/js/object-table.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Espace membres</h1>
+        <div id="blockError"></div>
+        <form action="">
+            <h2>Identification</h2>
+            <div class="field">
+                <label for="identifiant">Identifiant :</label>
+                <input type="text" name="identifiant" id="identifiant">
+            </div>
+            <div class="field">
+                <label for="password">Mot de passe :</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <button type="submit">Connexion</button>
+        </form>
+        <section id="espaceUtilisateur" hidden>
+        </section>
+    </main>
+</body>
+</html>

@@ -20,6 +20,13 @@ td, th {
     padding: 12px;
 }
 
+div {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    margin: 10px;
+}
+
 input {
     background-color: lightgreen;
     border: none;
@@ -29,4 +36,5 @@ button {
     background-color: lightgreen;
     border: none;
     cursor: pointer;
+    padding: 10px;
 }

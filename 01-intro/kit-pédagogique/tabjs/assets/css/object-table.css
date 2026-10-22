@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid green;
+    padding: 15px;
+    width: 70%;
+}
+
+form {
+    border: 1px dashed green;
+    padding: 15px;
+}
+
+.field {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+input {
+    background-color: lightgreen;
+    border: none;
+}
+
+button {
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.errorField {
+    position: absolute;
+    padding: 10px;
+    border: 1px solid green;
+    background-color: lightgreen;
+    top: 20px;
+    right: 40%;
+}
