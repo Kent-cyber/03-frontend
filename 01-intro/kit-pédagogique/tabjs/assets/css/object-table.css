@@ -42,3 +42,19 @@ button {
     top: 20px;
     right: 40%;
 }
+
+.tableEmployes {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    background-color: lightgray;
+    border: 1px solid white;
+    padding: 12px;
+}
+
+.surbrillance td {
+    background-color: lightgreen;
+    font-weight: bolder;
+}

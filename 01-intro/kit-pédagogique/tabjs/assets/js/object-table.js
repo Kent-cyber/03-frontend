@@ -32,6 +32,8 @@ fetch("./assets/js/employee.json")
 
             deconnectButton.addEventListener("click", () => {
                 espaceUtilisateur.hidden = true;
+                espaceUtilisateur.replaceChildren();
+                
                 form.hidden = false;
 
                 champIdentifiant.value = "";
@@ -76,7 +78,27 @@ fetch("./assets/js/employee.json")
                 }
 
                 const email = `${user.firstname}.${user.lastname}@exemple.com`.toLowerCase();
-            })
+
+                const donnees = [
+                    user.lastname,
+                    user.firstname,
+                    user.birthday,
+                    email,
+                    user.salary + " €"
+                ];
+
+                donnees.forEach(donnee => {
+                    const cellule = document.createElement("td");
+                    cellule.textContent = donnee;
+                    ligne.appendChild(cellule);
+                });
+
+                tbody.appendChild(ligne);
+            });
+
+            tableau.appendChild(tbody);
+
+            espaceUtilisateur.appendChild(tableau);
 
         } else {
             
@@ -84,7 +106,8 @@ fetch("./assets/js/employee.json")
             blockError.textContent = "Identifiant ou mot de passe incorrect";
 
             setTimeout(() => {
-                blockError.remove();
+                blockError.textContent = "";
+                blockError.className = "";
             }, 5000);
         }
     })
