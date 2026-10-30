@@ -26,3 +26,38 @@ th {
   text-align: left;
   background-color: rgb(185, 185, 185);
 }
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid black;
+  width: 350px;
+  margin: 15px;
+}
+
+.card__header {
+  padding: 5px;
+  background-color: green;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+.card__subtitle {
+  background-color: green;
+  color: white;
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.card__main {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
