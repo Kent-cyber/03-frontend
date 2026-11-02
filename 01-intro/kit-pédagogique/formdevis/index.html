@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de devis</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Formulaire</h1>
+        <form class="form" id="formDevis" action="#" method="GET">
+            <div class="form-row">
+                <input type="text" name="firstname" id="firstname" class="validation" placeholder="Prénom">
+
+                <input type="text" name="lastname" id="lastname" class="validation" placeholder="Nom">
+            </div>
+            
+            <input type="email" name="email" id="email" class="validation" placeholder="Email">
+
+            <div class="form-row">
+                <input type="tel" name="phone" id="phone" class="validation" placeholder="Tél.">
+
+                <input type="text" name="company" id="company" class="validation" placeholder="Société / collectivité">
+            </div>
+            
+            <textarea name="msg" id="msg" rows="4" class="validation" maxlength="3000" placeholder="Message"></textarea>
+
+            <label for="reason-select">Comment avez-vous connu laboîte ?</label>
+            <select name="reason-select" id="reason-select">
+                <option value="">-- merci de sélectionner une option --</option>
+            </select>
+
+            <label for="interect-select">Vous êtes intéressé par :</label>
+            <select name="interect-select" id="interect-select">
+                <option value="">-- merci de sélectionner une option --</option>
+            </select>
+
+            <div>
+                <input type="checkbox" id="submitData" name="submitData">
+                <label for="submitData">En envoyant ce formulaire, vous autorisez à utiliser vos données uniquement dans le cadre du traitement de votre demande. Elles ne seront en aucun cas utilisées à d'autres fins que celle de vous recontacter.</label>
+            </div>
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

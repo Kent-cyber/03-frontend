@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de commune par Code postal</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <label for="cp">Choisir une ville ou un CP:</label>
+        <input list="codepostal" name="commune" id="commune">
+        <datalist id="codepostal"></datalist>
+
+        <input type="button" value="validation" id="choix" name="choix">
+
+        <div>Ville d'expédition du colis : <span id="ville"></span></div>
+    </main>
+    
+    <footer>
+        ©CRM 2026- utilisation d'un datalist -- chargement de données JSON
+    </footer>
+</body>
+</html>
