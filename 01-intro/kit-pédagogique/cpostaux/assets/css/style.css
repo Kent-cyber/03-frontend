@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f4f7;
+    color: #333;
+}
+
+header {
+    background-color: #245b8f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[list] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#choix {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #245b8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#choix:hover {
+    background-color: #173d60;
+}
+
+#resultats {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #eaf3fc;
+    border-radius: 5px;
+}
+
+#resultats:empty {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}

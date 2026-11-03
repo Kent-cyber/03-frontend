@@ -8,7 +8,9 @@
     <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Recherche de commune par Code postal</h1>
+    </header>
     <main>
         <label for="cp">Choisir une ville ou un CP:</label>
         <input list="codepostal" name="commune" id="commune">
@@ -17,6 +19,8 @@
         <input type="button" value="validation" id="choix" name="choix">
 
         <div>Ville d'expédition du colis : <span id="ville"></span></div>
+
+        <div id="resultats"></div>
     </main>
     
     <footer>
