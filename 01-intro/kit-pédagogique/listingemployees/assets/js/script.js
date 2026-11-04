@@ -1,6 +1,9 @@
 let myEmployees = [];
+let newData = [];
 
 const myTable = document.getElementById("myTable");
+
+let ordreCroissant = true;
 
 function genererListe(_data) {
     myEmployees = _data.data;
@@ -11,14 +14,77 @@ function genererListe(_data) {
 
     headers.forEach((header) => {
         const cellh = document.createElement("th");
-        cellh.textContent = header;
+
+        if (header === "Monthly salary") {
+            const btntri = document.createElement("button");
+            btntri.textContent = "Trier ↑↓";
+
+            btntri.addEventListener("click", () => {
+                trier();
+            });
+
+            cellh.appendChild(document.createTextNode(header + " "));
+            cellh.appendChild(btntri);
+        } else {
+            cellh.textContent = header;
+        }
+        
         titleRow.appendChild(cellh);
     });
+    
+    newData = myEmployees.slice(0, 10);
 
-    const tbody = document.createElement("tbody");
+    const tbody = document.createElement("tbody");    
+    myTable.appendChild(tbody);
 
-    for (let i = 0; i < 10; i++) {
-        const employee = myEmployees[i];
+    const tfoot = myTable.createTFoot();
+    const footerRow = tfoot.insertRow();
+
+    const cellTotal = footerRow.insertCell();
+    cellTotal.colSpan = 3;
+    cellTotal.textContent = "TOTAL";
+
+    const cellSalaire = footerRow.insertCell();
+    cellSalaire.textContent = "0.00 €";
+
+    const cellVide = footerRow.insertCell();
+    cellVide.colSpan = 2;
+
+    afficherEmployes();
+}
+
+function trier() {
+    newData.sort((a, b) => {
+        if (ordreCroissant) {
+            return a.employee_salary - b.employee_salary;
+        } else {
+            return b.employee_salary - a.employee_salary;
+        }
+    });
+
+    ordreCroissant = !ordreCroissant;
+
+    const btntri = myTable.querySelector("th:nth-child(4) button");
+    btntri.textContent = ordreCroissant ? "Trier ↑" : "Trier ↓";
+
+    afficherEmployes();
+}
+
+function genererEmail(fullname) {
+    let noms = fullname.split(" ");
+
+    return noms[0][0].toLowerCase() + "." + noms[noms.length - 1].toLowerCase() + "@email.com";
+}
+
+function afficherEmployes() {
+    const tbody = myTable.querySelector("tbody");
+
+    tbody.innerHTML = "";
+
+    let totalSalaire = 0;
+
+    for (let i = 0; i < newData.length; i++) {
+        const employee = newData[i];
         const ligne = document.createElement("tr");
 
         const donnees = [
@@ -27,8 +93,9 @@ function genererListe(_data) {
             genererEmail(employee.employee_name),
             `${(employee.employee_salary / 12).toFixed(2)} €`,
             `${new Date().getFullYear() - employee.employee_age}`,
-            `En cours`
         ];
+
+        totalSalaire += employee.employee_salary / 12;
 
         for (let j = 0; j < donnees.length; j++) {
             const cell = document.createElement("td");
@@ -36,16 +103,37 @@ function genererListe(_data) {
             ligne.appendChild(cell);
         }
 
+        const cellActions = document.createElement("td");
+
+        const btnduplicate = document.createElement("button");
+        btnduplicate.textContent = "Duplicate";
+
+        btnduplicate.addEventListener("click", () => {
+            duplicateEmployee(employee.id);
+        });
+
+        const btndelete = document.createElement("button");
+        btndelete.textContent = "Delete";
+
+        btndelete.addEventListener("click", () => {
+            deleteEmployee(employee.id);
+        });
+
+        cellActions.appendChild(btnduplicate);
+        cellActions.appendChild(btndelete);
+        ligne.appendChild(cellActions);
+
         tbody.appendChild(ligne);
     }
-        
-    myTable.appendChild(tbody);
+
+    myTable.querySelector("tfoot td:nth-child(2)").textContent = totalSalaire.toFixed(2) + " €";
 }
 
-function genererEmail(fullname) {
-    let noms = fullname.split(" ");
+function deleteEmployee(id) {
+    myEmployees = myEmployees.filter(emp => emp.id !== id);
+    newData = newData.filter(emp => emp.id !== id);
 
-    return noms[0][0].toLowerCase() + "." + noms[noms.length - 1].toLowerCase() + "@email.com";
+    afficherEmployes();
 }
 
 fetch("https://dummy.restapiexample.com/api/v1/employees")
