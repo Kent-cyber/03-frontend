@@ -1,0 +1,40 @@
+:root {
+    --color1: #30343F;
+    --color2: #FAFAFF;
+    --color3: #E4D9FF;
+    --color4: #374479;
+    --color5: #6E7799;
+    --color6: #C490D1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    border: 1px solid var(--color3);
+    width: 75%;
+    margin: 25px;
+}
+
+h1 {
+    color: var(--color3);
+    margin: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    color: var(--color3);
+    background-color: var(--color4);
+    margin: 2rem;
+}
+
+td, th {
+    border: 1px solid var(--color3);
+    padding: 8px;
+}

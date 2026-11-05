@@ -81,6 +81,21 @@ function afficherEmployes() {
 
     tbody.innerHTML = "";
 
+    if (newData.length === 0) {
+        const ligne = document.createElement("tr");
+        const cellule = document.createElement("td");
+
+        cellule.colSpan = 6;
+        cellule.textContent = "Aucune information disponible dans le tableau";
+
+        ligne.appendChild(cellule);
+        tbody.appendChild(ligne);
+
+        myTable.querySelector("tfoot td:nth-child(2)").textContent = "0.00 €";
+
+        return;
+    }
+
     let totalSalaire = 0;
 
     for (let i = 0; i < newData.length; i++) {
@@ -106,14 +121,16 @@ function afficherEmployes() {
         const cellActions = document.createElement("td");
 
         const btnduplicate = document.createElement("button");
-        btnduplicate.textContent = "Duplicate";
+        btnduplicate.className = "duplicate";
+        btnduplicate.textContent = "🗍 Duplicate";
 
         btnduplicate.addEventListener("click", () => {
             duplicateEmployee(employee.id);
         });
 
         const btndelete = document.createElement("button");
-        btndelete.textContent = "Delete";
+        btndelete.className = "delete";
+        btndelete.textContent = "🗑 Delete";
 
         btndelete.addEventListener("click", () => {
             deleteEmployee(employee.id);
@@ -127,6 +144,15 @@ function afficherEmployes() {
     }
 
     myTable.querySelector("tfoot td:nth-child(2)").textContent = totalSalaire.toFixed(2) + " €";
+}
+
+function duplicateEmployee(id) {
+    const employee = myEmployees.find(emp => emp.id === id);
+
+    myEmployees.push(employee);
+    newData.push(employee);
+
+    afficherEmployes();
 }
 
 function deleteEmployee(id) {

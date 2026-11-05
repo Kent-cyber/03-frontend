@@ -6,6 +6,15 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+header h1 {
+  color: gray;
+}
+
+header p {
+  color: gray;
+  font-style: italic;
+}
+
 main {
     margin: 0 5%;
 }
@@ -27,4 +36,27 @@ th {
 
 tfoot {
   font-weight: bolder;
+}
+
+.duplicate, .delete {
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.duplicate:hover, .delete:hover {
+  transform: translateY(-2px);
+}
+
+.duplicate {
+  background-color: rgb(44, 164, 238);
+  color: white;
+}
+
+.delete {
+  background-color: rgb(241, 58, 89);
+  color: white;
 }
